@@ -1,0 +1,24 @@
+<div class="grid"  >
+
+  <ng-container *ngFor="let item of songData" >
+    <mat-card class="example-card card card m-2" >
+      <mat-card-header>
+        <div mat-card-avatar [style.background-image]="'url('+item.src+')'"  class="example-header-image "></div>
+        <mat-card-title>  </mat-card-title>
+      <mat-card-subtitle>{{item.singer}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="item.src" alt="Photo of a Shiba Inu">
+    <mat-card-content class="card-front">
+      <p>
+        {{item.songName}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="card-back "  >
+      <button (click)="sendData(item)" mat-button>Play</button>
+      <button mat-button>Add in Queue</button>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>
+<app-current-song  [getSongDetails]="currentSong"></app-current-song>
+</div>
+

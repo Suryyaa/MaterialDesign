@@ -25,8 +25,12 @@ import { ServicesComponent } from './components/services/services.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { SearchComponent } from './components/search/search.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { SongsComponent } from './components/songs/songs.component';
+import {MatCardModule} from '@angular/material/card';
+import { CurrentSongComponent } from './components/current-song/current-song.component';
+
 const routes: Routes = [
-  { path: 'home', component: BooksDetailComponent },
+  { path: 'home', component: SongsComponent },
   { path: 'about', component: AboutUsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'change-password', component: ChangePassComponent },
@@ -43,6 +47,8 @@ const routes: Routes = [
     HomeComponent,
     BooksDetailComponent,
     AboutUsComponent,
+    SongsComponent,
+    CurrentSongComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +61,8 @@ const routes: Routes = [
     MatIconModule,
     MatListModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [DataService,HttpClient],
   bootstrap: [AppComponent]
