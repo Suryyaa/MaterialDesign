@@ -1,0 +1,25 @@
+.my-side-nav{
+  width: 300px;
+	background-color: aqua;
+	height: 100vh;
+  transition: width 1s cubic-bezier(0.42, 0, 0.99, 0.11) 0s;
+}
+.my-new-side-nav{
+  width: 20px;
+  background-color: red;
+	height: 100vh;
+  color: white;
+  transition: width 1s;
+}
+
+
+
+
+
+
+
+
+/*
+.my-new-side-nav:hover{
+  width: 250px;
+} */

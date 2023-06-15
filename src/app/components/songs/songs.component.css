@@ -14,3 +14,15 @@
 
 
 
+.round-button {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+  /* Add other styles as needed */
+}
+.round-button-mouse-hover {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* Add other styles as needed */
+}

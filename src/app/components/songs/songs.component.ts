@@ -23,6 +23,13 @@ this.currentSong = data
     {src:'assets/images/img (5).jpg', songName:'Let me love you' ,  singer:'Athif'},
     {src:'assets/images/img (6).jpg', songName:'King Man' ,  singer:'Himesh'},
     {src:'assets/images/img (9).jpg', songName:'Savan Savan' ,  singer:'Getta'},
-    {src:'assets/images/img (8).jpg', songName:'Barsat' ,  singer:'Lata'},
+    {src:'assets/images/img (11).jpg', songName:'Barsat' ,  singer:'Lata'},
+    {src:'assets/images/img (12).jpg', songName:'Barsat' ,  singer:'Lata'},
+    {src:'assets/images/img (13).jpg', songName:'Barsat' ,  singer:'Lata'},
+    {src:'assets/images/img (14).jpg', songName:'Barsat' ,  singer:'Lata'},
+    {src:'assets/images/img (15).jpg', songName:'Barsat' ,  singer:'Lata'},
+    {src:'assets/images/img (16).jpg', songName:'Barsat' ,  singer:'Lata'},
+    {src:'assets/images/img (17).jpg', songName:'Barsat' ,  singer:'Lata'},
+    {src:'assets/images/img (18).jpg', songName:'Barsat' ,  singer:'Lata'},
   ]
 }

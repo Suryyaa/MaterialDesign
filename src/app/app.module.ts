@@ -28,7 +28,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { SongsComponent } from './components/songs/songs.component';
 import {MatCardModule} from '@angular/material/card';
 import { CurrentSongComponent } from './components/current-song/current-song.component';
-
+import { RoundButtonDirective } from './round-button.directive';
+import { MySideNavComponent } from './components/my-side-nav/my-side-nav.component';
+// import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 const routes: Routes = [
   { path: 'home', component: SongsComponent },
   { path: 'about', component: AboutUsComponent },
@@ -49,6 +52,8 @@ const routes: Routes = [
     AboutUsComponent,
     SongsComponent,
     CurrentSongComponent,
+    RoundButtonDirective,
+    MySideNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +68,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HttpClientModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    // AngularFireModule.initializeApp(environment.firebase)
+
   ],
   providers: [DataService,HttpClient],
   bootstrap: [AppComponent]
