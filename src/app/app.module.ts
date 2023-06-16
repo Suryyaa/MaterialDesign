@@ -30,6 +30,7 @@ import {MatCardModule} from '@angular/material/card';
 import { CurrentSongComponent } from './components/current-song/current-song.component';
 import { RoundButtonDirective } from './round-button.directive';
 import { MySideNavComponent } from './components/my-side-nav/my-side-nav.component';
+import { MyRoundBtnDirective } from './my-round-btn.directive';
 // import { FirebaseApp } from '../../node_modules/firebase/app';
 // import { environment } from '../environments/environment';
 const routes: Routes = [
@@ -54,6 +55,7 @@ const routes: Routes = [
     CurrentSongComponent,
     RoundButtonDirective,
     MySideNavComponent,
+    MyRoundBtnDirective,
   ],
   imports: [
     BrowserModule,
