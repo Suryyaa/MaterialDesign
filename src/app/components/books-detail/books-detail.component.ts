@@ -11,7 +11,7 @@ export class BooksDetailComponent implements OnInit {
   constructor(private bd : DataService) { }
 
   ngOnInit(): void {
-    console.log(this.bd.getData())
+    // console.log(this.bd.getData())
   }
 
 }

@@ -30,8 +30,8 @@ import {MatCardModule} from '@angular/material/card';
 import { CurrentSongComponent } from './components/current-song/current-song.component';
 import { RoundButtonDirective } from './round-button.directive';
 import { MySideNavComponent } from './components/my-side-nav/my-side-nav.component';
-// import { AngularFireModule } from '@angular/fire';
-import { environment } from '../environments/environment';
+// import { FirebaseApp } from '../../node_modules/firebase/app';
+// import { environment } from '../environments/environment';
 const routes: Routes = [
   { path: 'home', component: SongsComponent },
   { path: 'about', component: AboutUsComponent },
@@ -69,7 +69,7 @@ const routes: Routes = [
     HttpClientModule,
     MatCardModule,
     MatIconModule,
-    // AngularFireModule.initializeApp(environment.firebase)
+    // FirebaseApp.initializeApp(environment.firebase)
 
   ],
   providers: [DataService,HttpClient],

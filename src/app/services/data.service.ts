@@ -7,11 +7,11 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class DataService {
-  private apiUrl = environment.apiUrl;
+  // private apiUrl = environment.apiUrl;
 
-  constructor(private http: HttpClient) {}
+  // constructor(private http: HttpClient) {}
 
-  getData(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/local.Employee`);
-  }
+  // getData(): Observable<any> {
+  //   return this.http.get<any>(`${this.apiUrl}/local.Employee`);
+  // }
 }
