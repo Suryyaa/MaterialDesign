@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "MaterialDesign"
+  "defaultProject": "MaterialDesign",
+  "cli": {
+    "analytics": "fafd34db-606f-4088-9d55-fbc22c7db2a2"
+  }
 }
