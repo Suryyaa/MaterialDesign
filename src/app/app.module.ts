@@ -31,8 +31,12 @@ import { CurrentSongComponent } from './components/current-song/current-song.com
 import { RoundButtonDirective } from './round-button.directive';
 import { MySideNavComponent } from './components/my-side-nav/my-side-nav.component';
 import { MyRoundBtnDirective } from './my-round-btn.directive';
+import { AboutComponent } from './rout-components/about/about.component';
+import { GalleryComponent } from './rout-components/gallery/gallery.component';
+import { ProductsComponent } from './rout-components/products/products.component';
 // import { FirebaseApp } from '../../node_modules/firebase/app';
 // import { environment } from '../environments/environment';
+
 const routes: Routes = [
   { path: 'home', component: SongsComponent },
   { path: 'about', component: AboutUsComponent },
@@ -44,6 +48,44 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: '**', component:  PageNotFoundComponent},
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const routes:Routes = [
+
+//   {path:'Home',component:HomeComponent},
+//   {path:'About',component:AboutUsComponent},
+//   {path:'Gallery',component:GalleryComponent},
+//   {path:'Products',component:ProductsComponent},
+// ]
+
+
+
+
+
+
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +98,9 @@ const routes: Routes = [
     RoundButtonDirective,
     MySideNavComponent,
     MyRoundBtnDirective,
+    AboutComponent,
+    GalleryComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,6 +116,7 @@ const routes: Routes = [
     HttpClientModule,
     MatCardModule,
     MatIconModule,
+    MatExpansionModule
     // FirebaseApp.initializeApp(environment.firebase)
 
   ],

@@ -4,17 +4,37 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <mat-list-item role="listitem" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</mat-list-item>
-      <mat-list-item role="listitem" routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About us</mat-list-item>
-      <mat-list-item role="listitem" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</mat-list-item>
-      <mat-list-item role="listitem" routerLink="/change-password" routerLinkActive="active" ariaCurrentWhenActive="page">Change Password</mat-list-item>
-      <mat-list-item role="listitem" routerLink="/new-account" routerLinkActive="active" ariaCurrentWhenActive="page">New Account</mat-list-item>
-      <mat-list-item role="listitem" routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</mat-list-item>
-      <mat-list-item role="listitem" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contacts us</mat-list-item>
-      <mat-list-item role="listitem" routerLink="/search" routerLinkActive="active" ariaCurrentWhenActive="page">ChatGPT</mat-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
+
+          <mat-nav-list>
+              <mat-list-item routerLink="#">
+                  <mat-icon>dashboard</mat-icon><span>Dashboard</span>
+              </mat-list-item>
+              <mat-expansion-panel [class.mat-elevation-z0]="true">
+                  <mat-expansion-panel-header>
+                      Mobile Phone
+                  </mat-expansion-panel-header>
+                  <mat-nav-list>
+                      <a mat-list-item routerLink="#">
+                          <mat-icon>apple</mat-icon><span>iOS</span>
+                      </a>
+                      <a mat-list-item routerLink="#">
+                          <mat-icon>android</mat-icon><span>Android</span>
+                      </a>
+                  </mat-nav-list>
+              </mat-expansion-panel>
+              <mat-expansion-panel [class.mat-elevation-z0]="true">
+                  <mat-expansion-panel-header>
+                      Frameworks
+                  </mat-expansion-panel-header>
+                  <mat-nav-list>
+                      <a mat-list-item routerLink="#">Spring</a>
+                      <a mat-list-item routerLink="#">Hibernate</a>
+                      <a mat-list-item routerLink="#">Struts</a>
+                  </mat-nav-list>
+              </mat-expansion-panel>
+          </mat-nav-list>
+      </mat-sidenav>
+
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
@@ -33,4 +53,5 @@
   </mat-sidenav-content>
 
 </mat-sidenav-container>
+
 

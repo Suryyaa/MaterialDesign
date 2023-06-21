@@ -1,24 +1,38 @@
 
 
 <button (click)="isMenuOpen =! isMenuOpen">Menu</button>
+<!-- <ng-container *ngFor="let item of menuItems" >
+
+
+  <div class="d-flex">
+    <i aria-hidden="true" class="{{item.icon}}"></i>
+    {{item.name}}
+  </div>
+
+</ng-container>
+<button (click)="menuItems.push({name:'my name', icon:'s'})" >add</button>
+<i class="fa fa-user-o" aria-hidden="true"></i>
+<i class="fa fa-user-o" aria-hidden="true"></i> -->
+
+
+
+
+
+
+
+
 <div class="my-side-nav" [ngStyle]="{ 'width': isMenuOpen ? '300px' : '0px' }"  >
-  <ng-container *ngFor="let item of menuItems" >
 
-
-    <div class="d-flex">
-      <i aria-hidden="true" class="{{item.icon}}"></i>
-      {{item.name}}
-    </div>
-
-  </ng-container>
-  <button (click)="menuItems.push({name:'my name', icon:'s'})" >add</button>
-  <i class="fa fa-user-o" aria-hidden="true"></i>
-  <i class="fa fa-user-o" aria-hidden="true"></i>
-
+  <a routerLink="/Home"> Home</a>
+  <a routerLink="/About"> About</a>
+  <a routerLink="/Gallery"> Gallery</a>
+  <a routerLink="/Products"> Products</a>
 
 </div>
 
-
+<div>
+  <router-outlet></router-outlet>
+</div>
 
 
 
