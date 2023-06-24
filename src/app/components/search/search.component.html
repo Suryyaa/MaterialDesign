@@ -1,6 +1,19 @@
-<input type="text" class="form-control" (keydown.enter)="test(txt)" #txt  >
-<div *ngIf="bool" >
-  {{gVar}}
+<div class="d-flex container m-3">
+  <input placeholder="Search Images" type="text" class="form-control"(keydown.enter)="searchPhoto(txt.value,numberOfPages.value)" #txt  >
+  <input placeholder="Number of Images?" class="form-control w-auto" type="number"  #numberOfPages >
+  <button class="btn btn-primary" (click)="searchPhoto(txt.value,numberOfPages.value)">Search</button>
 </div>
-<iframe src="https://chat.openai.com/share/787e9fa6-2656-431a-9993-bcfd5cb45a50" height="100%" width="100%" frameborder="0"></iframe>
-<!-- <iframe src="https://chat.openai.com/share/787e9fa6-2656-431a-9993-bcfd5cb45a50" height="100%" width="100%" frameborder="0"></iframe> -->
+
+
+
+<div class="gallery">
+    <ng-container  *ngFor="let item of resultData">
+      <mat-card style="display: flex; align-items: stretch;">
+
+        <img src="{{item.src.medium}}" (click)="openLargeImg()" alt="">
+      </mat-card>
+    </ng-container>
+  </div>
+  <div>
+  </div>
+

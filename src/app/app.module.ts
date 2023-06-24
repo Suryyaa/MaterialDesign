@@ -34,20 +34,29 @@ import { MyRoundBtnDirective } from './my-round-btn.directive';
 import { AboutComponent } from './rout-components/about/about.component';
 import { GalleryComponent } from './rout-components/gallery/gallery.component';
 import { ProductsComponent } from './rout-components/products/products.component';
+import { UserDetailsComponent } from './rout-components/user-details/user-details.component';
+import { UserDashboardComponent } from './rout-components/user-dashboard/user-dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { UserAddressComponent } from './rout-components/user-address/user-address.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { ReactiveFormsModule } from '@angular/forms';
 // import { FirebaseApp } from '../../node_modules/firebase/app';
 // import { environment } from '../environments/environment';
 
-const routes: Routes = [
-  { path: 'home', component: SongsComponent },
-  { path: 'about', component: AboutUsComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'change-password', component: ChangePassComponent },
-  { path: 'new-account', component: NewAccountComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'contact', component: ContactsComponent },
-  { path: 'search', component: SearchComponent },
-  { path: '**', component:  PageNotFoundComponent},
-];
+// const routes: Routes = [
+//   { path: 'home', component: SongsComponent },
+//   { path: 'about', component: AboutUsComponent },
+//   { path: 'login', component: LoginComponent },
+//   { path: 'change-password', component: ChangePassComponent },
+//   { path: 'new-account', component: NewAccountComponent },
+//   { path: 'services', component: ServicesComponent },
+//   { path: 'contact', component: ContactsComponent },
+//   { path: 'search', component: SearchComponent },
+//   { path: '**', component:  PageNotFoundComponent},
+// ];
 
 
 
@@ -64,23 +73,12 @@ const routes: Routes = [
 
 
 
-
-
-
-
-// const routes:Routes = [
-
-//   {path:'Home',component:HomeComponent},
-//   {path:'About',component:AboutUsComponent},
-//   {path:'Gallery',component:GalleryComponent},
-//   {path:'Products',component:ProductsComponent},
-// ]
-
-
-
-
-
-
+const route : Routes = [
+  // {path:'user', component:  UserDetailsComponent}
+  {path:'User', component:  UserDashboardComponent},
+  {path:'Address', component:  UserAddressComponent},
+  {path:'Search', component:  SearchComponent},
+]
 
 
 
@@ -101,6 +99,10 @@ const routes: Routes = [
     AboutComponent,
     GalleryComponent,
     ProductsComponent,
+    UserDetailsComponent,
+    UserDashboardComponent,
+    UserAddressComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -112,11 +114,18 @@ const routes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(route),
     HttpClientModule,
     MatCardModule,
     MatIconModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    ReactiveFormsModule,
+    HttpClientModule
     // FirebaseApp.initializeApp(environment.firebase)
 
   ],
