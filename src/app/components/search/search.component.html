@@ -1,19 +1,19 @@
 <div class="d-flex container m-3">
-  <input placeholder="Search Images" type="text" class="form-control"(keydown.enter)="searchPhoto(txt.value,numberOfPages.value)" #txt  >
-  <input placeholder="Number of Images?" class="form-control w-auto" type="number"  #numberOfPages >
-  <button class="btn btn-primary" (click)="searchPhoto(txt.value,numberOfPages.value)">Search</button>
+  <input placeholder="Search Images"  #imageType   type="text" class="form-control"(keydown.enter)="searchPhoto(imageType.value,numberOfPages.value)">
+  <input placeholder="Number of Images?"  #numberOfPages class="form-control w-auto" type="number"  >
+  <button class="btn btn-primary" (click)="searchPhoto(imageType.value,numberOfPages.value)">Search</button>
 </div>
-
-
-
 <div class="gallery">
-    <ng-container  *ngFor="let item of resultData">
-      <mat-card style="display: flex; align-items: stretch;">
+    <ng-container  *ngFor="let item of data">
+      <mat-card  style="display: flex; align-items: stretch;">
 
-        <img src="{{item.src.medium}}" (click)="openLargeImg()" alt="">
+        <img (click)="updateImageInService(item.src.medium)" [src]="item.src.medium"  alt="">
       </mat-card>
     </ng-container>
   </div>
   <div>
-  </div>
+</div>
 
+<app-img-search>
+
+</app-img-search>

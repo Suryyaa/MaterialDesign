@@ -43,6 +43,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ImgSearchComponent } from './img-search/img-search.component';
 // import { FirebaseApp } from '../../node_modules/firebase/app';
 // import { environment } from '../environments/environment';
 
@@ -78,6 +79,7 @@ const route : Routes = [
   {path:'User', component:  UserDashboardComponent},
   {path:'Address', component:  UserAddressComponent},
   {path:'Search', component:  SearchComponent},
+  {path:'Search-Img', component:  ImgSearchComponent},
 ]
 
 
@@ -102,7 +104,8 @@ const route : Routes = [
     UserDetailsComponent,
     UserDashboardComponent,
     UserAddressComponent,
-    SearchComponent
+    SearchComponent,
+    ImgSearchComponent
   ],
   imports: [
     BrowserModule,

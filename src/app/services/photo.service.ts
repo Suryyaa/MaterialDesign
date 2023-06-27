@@ -11,11 +11,10 @@ const headers = new HttpHeaders({
   providedIn: 'root'
 })
 export class PhotoService {
+  public selectedImages:any;
 
-  constructor(private http:HttpClient) {
+  constructor(private http:HttpClient) { }
 
-
-   }
    getData(search,perPage): Observable<any>{
     const url = 'https://api.pexels.com/v1/search?query='+search+'&per_page='+perPage;
     return this.http.get(url,{headers})

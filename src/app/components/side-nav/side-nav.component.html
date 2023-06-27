@@ -35,6 +35,9 @@
               <mat-list-item routerLink="Search">
                 <mat-icon>search</mat-icon><span>Search Images</span>
             </mat-list-item>
+              <mat-list-item routerLink="Search-Img">
+                <mat-icon>circle</mat-icon><span>Search-Img</span>
+            </mat-list-item>
           </mat-nav-list>
       </mat-sidenav>
 
@@ -48,7 +51,8 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>My Music</span>
+      <span>MyApp</span>
+
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
